@@ -4,6 +4,11 @@ description: 'Prepare repository and all dependencies'
 runs:
   using: 'composite'
   steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24.5'
+
     - name: Set up Bun
       uses: oven-sh/setup-bun@v2
 
