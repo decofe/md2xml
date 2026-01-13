@@ -19,7 +19,7 @@
   },
   "[!start-pkg]": "",
   "name": "md2xml",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert Markdown to xml2rfc v3 format",
   "type": "module",
   "main": "./dist/index.js",
