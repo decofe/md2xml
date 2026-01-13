@@ -16,10 +16,10 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Check code
-        run: bun check
+        run: pnpm check
 
       - name: Check types
-        run: bun check:types
+        run: pnpm check:types
 
   test:
     name: Test Runtime
@@ -32,6 +32,6 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Run tests
-        run: bun run test --bail=1
+        run: pnpm run test --bail=1
         env:
           CI: true
