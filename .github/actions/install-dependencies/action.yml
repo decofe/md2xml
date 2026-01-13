@@ -1,0 +1,21 @@
+name: 'Install dependencies'
+description: 'Prepare repository and all dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Bun
+      uses: oven-sh/setup-bun@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install xml2rfc
+      shell: bash
+      run: pip install xml2rfc
+
+    - name: Install dependencies
+      shell: bash
+      run: bun install

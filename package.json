@@ -1,0 +1,38 @@
+{
+  "name": "md2xml",
+  "version": "0.0.0",
+  "description": "Convert Markdown to xml2rfc v3 format",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "md2xml": "./dist/Cli.js",
+    "md2xml.src": "./src/Cli.ts"
+  },
+  "scripts": {
+    "build": "zile",
+    "changeset:publish": "zile publish:prepare && changeset publish && zile publish:post",
+    "changeset:version": "changeset version",
+    "check": "biome check --fix --unsafe",
+    "check:types": "tsc --noEmit",
+    "dev": "zile dev",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@changesets/cli": "^2.29.8",
+    "@types/bun": "latest",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17",
+    "zile": "^0.0.15"
+  },
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "src": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}
