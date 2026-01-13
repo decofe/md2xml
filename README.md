@@ -8,7 +8,7 @@ md2xml is a tool for converting Markdown documents to xml2rfc v3 XML format, sui
 
 ## Reference
 
-```
+```sh
 md2xml - Convert Markdown to xml2rfc v3 format
 
 Usage:
