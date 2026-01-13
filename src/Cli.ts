@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 import * as Fs from "node:fs"
 import * as Path from "node:path"
 import * as Xml from "./Xml.js"
