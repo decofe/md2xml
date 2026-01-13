@@ -2,26 +2,25 @@
 
 Convert Markdown to xml2rfc v3 format (RFC 7991).
 
----
-
 ## Overview
 
 md2xml is a tool for converting Markdown documents to xml2rfc v3 XML format, suitable for IETF Internet-Draft submissions.
 
-## Quick Start
+## Reference
 
-```sh
-npx md2xml <input.md>
 ```
+md2xml - Convert Markdown to xml2rfc v3 format
 
-### Example
+Usage:
+  md2xml <input.md> [-o <output.xml>]
 
-```sh
-npx md2xml draft-spec.md
-# Converted draft-spec.md → draft-spec.xml
+Options:
+  -o, --output  Output file path (use "-" for stdout)
 
-npx md2xml draft-spec.md -o out/spec.xml
-# Converted draft-spec.md → out/spec.xml
+Examples:
+  md2xml draft.md
+  md2xml draft.md -o out/draft.xml
+  md2xml draft.md -o - | xml2rfc --text --html /dev/stdin
 ```
 
 ## License
